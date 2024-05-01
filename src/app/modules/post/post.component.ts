@@ -13,6 +13,7 @@ export class PostComponent implements OnInit {
   posts$!: Observable<IPost[]>;
   
   constructor(private _postService: PostService){}
+  
   ngOnInit(): void {
     this.posts$= this._postService.getPosts();
   }

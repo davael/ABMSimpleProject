@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PostService {
-  url: string = environment.urlApi + 'posts/';
+  private url: string = environment.urlApi + 'posts/';
 
   constructor(private http: HttpClient) { }
 
@@ -15,4 +15,14 @@ export class PostService {
   getPosts() : Observable<IPost[]>{
     return this.http.get<IPost[]>(this.url);
   }
+  getPostById(idPost: string){
+    return this.http.get<IPost>(this.url+ idPost);
+  }
+  putPost(post:IPost){
+    return this.http.put(this.url + post.id,post);
+  }
+  postPost(post:IPost){
+    return this.http.post(this.url,post);
+  }
+  
 }

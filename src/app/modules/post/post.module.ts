@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { PostRoutingModule } from './post-routing.module';
 import { PostComponent } from './post.component';
+import { PostDetailComponent } from './pages/post-detail/post-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
-    PostComponent
+    PostComponent,
+    PostDetailComponent
   ],
   imports: [
     CommonModule,
-    PostRoutingModule
+    PostRoutingModule,
+    ReactiveFormsModule,
+    NgbModule
   ]
 })
 export class PostModule { }
