@@ -59,7 +59,7 @@ export class PostDetailComponent implements OnInit {
       id: new FormControl(0, Validators.required),
       title: new FormControl('', Validators.required),
       body: new FormControl('', Validators.required),
-      userId: new FormControl(0, Validators.required)
+      userId: new FormControl(null, Validators.required)
     });
   }
 
